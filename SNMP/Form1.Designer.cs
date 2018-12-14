@@ -40,11 +40,12 @@
             this.txtOIDValue = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvSNMPListValue = new System.Windows.Forms.DataGridView();
+            this.cbbSNMPVersion = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbbCommand = new System.Windows.Forms.ComboBox();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Values = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbSNMPVersion = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSNMPListValue)).BeginInit();
@@ -117,29 +118,30 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbbCommand);
             this.groupBox2.Controls.Add(this.btnExecute);
             this.groupBox2.Controls.Add(this.txtOIDValue);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(690, 81);
+            this.groupBox2.Size = new System.Drawing.Size(690, 65);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SNMP";
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(547, 32);
+            this.btnExecute.Location = new System.Drawing.Point(609, 26);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(75, 23);
             this.btnExecute.TabIndex = 7;
-            this.btnExecute.Text = "GET";
+            this.btnExecute.Text = "Execute";
             this.btnExecute.UseVisualStyleBackColor = true;
             this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
             // txtOIDValue
             // 
-            this.txtOIDValue.Location = new System.Drawing.Point(119, 32);
+            this.txtOIDValue.Location = new System.Drawing.Point(116, 29);
             this.txtOIDValue.Name = "txtOIDValue";
             this.txtOIDValue.Size = new System.Drawing.Size(298, 20);
             this.txtOIDValue.TabIndex = 6;
@@ -149,9 +151,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(47, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "OID";
+            this.label4.Text = "OID: ";
             // 
             // dgvSNMPListValue
             // 
@@ -164,22 +166,6 @@
             this.dgvSNMPListValue.Name = "dgvSNMPListValue";
             this.dgvSNMPListValue.Size = new System.Drawing.Size(690, 150);
             this.dgvSNMPListValue.TabIndex = 2;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // OID
-            // 
-            this.OID.HeaderText = "OID";
-            this.OID.Name = "OID";
-            // 
-            // Values
-            // 
-            this.Values.HeaderText = "Values";
-            this.Values.Name = "Values";
-            this.Values.Width = 200;
             // 
             // cbbSNMPVersion
             // 
@@ -200,6 +186,34 @@
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Version";
+            // 
+            // cbbCommand
+            // 
+            this.cbbCommand.FormattingEnabled = true;
+            this.cbbCommand.Items.AddRange(new object[] {
+            "Get",
+            "Get Next",
+            "Get Bulk"});
+            this.cbbCommand.Location = new System.Drawing.Point(482, 28);
+            this.cbbCommand.Name = "cbbCommand";
+            this.cbbCommand.Size = new System.Drawing.Size(121, 21);
+            this.cbbCommand.TabIndex = 8;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // OID
+            // 
+            this.OID.HeaderText = "OID";
+            this.OID.Name = "OID";
+            // 
+            // Values
+            // 
+            this.Values.HeaderText = "Values";
+            this.Values.Name = "Values";
+            this.Values.Width = 500;
             // 
             // Form1
             // 
@@ -235,11 +249,12 @@
         private System.Windows.Forms.Button btnExecute;
         private System.Windows.Forms.TextBox txtOIDValue;
         private System.Windows.Forms.DataGridView dgvSNMPListValue;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbbSNMPVersion;
+        private System.Windows.Forms.ComboBox cbbCommand;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn OID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Values;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbbSNMPVersion;
     }
 }
 

@@ -33,6 +33,7 @@ namespace SNMP
             thread.Start();
 
             cbbSNMPVersion.Text = "2";
+            cbbCommand.Text = "Get";
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
@@ -58,9 +59,23 @@ namespace SNMP
 
                 pdu.SetVbList(vbList);
 
-                // GET 
-                pdu.Type = PduType.Get;
-                dicOID = snmp.Get(version, pdu);
+                switch (cbbCommand.SelectedItem)
+                {
+                    case "Get":
+                        pdu.Type = PduType.Get;
+                        dicOID = snmp.Get(version, pdu);
+                        break;
+                    case "Get Next":
+                        pdu.Type = PduType.GetNext;
+                        dicOID = snmp.Get(version, pdu);
+                        break;
+                    case "Get Bulk":
+                        pdu.Type = PduType.GetBulk;
+                        snmp.MaxRepetitions = 20;
+                        dicOID = snmp.Get(version, pdu);
+                        break;
+                }
+
 
                 if (dicOID != null && dicOID.Count > 0)
                 {
