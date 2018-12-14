@@ -43,6 +43,8 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Values = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbbSNMPVersion = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSNMPListValue)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cbbSNMPVersion);
             this.groupBox1.Controls.Add(this.txtPort);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtCommunityString);
@@ -65,7 +69,7 @@
             // 
             // txtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(119, 88);
+            this.txtPort.Location = new System.Drawing.Point(343, 23);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(164, 20);
             this.txtPort.TabIndex = 5;
@@ -73,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 91);
+            this.label3.Location = new System.Drawing.Point(299, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 4;
@@ -89,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 55);
+            this.label2.Location = new System.Drawing.Point(14, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 2;
@@ -177,6 +181,26 @@
             this.Values.Name = "Values";
             this.Values.Width = 200;
             // 
+            // cbbSNMPVersion
+            // 
+            this.cbbSNMPVersion.FormattingEnabled = true;
+            this.cbbSNMPVersion.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbbSNMPVersion.Location = new System.Drawing.Point(119, 90);
+            this.cbbSNMPVersion.Name = "cbbSNMPVersion";
+            this.cbbSNMPVersion.Size = new System.Drawing.Size(121, 21);
+            this.cbbSNMPVersion.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(47, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Version";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +238,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn OID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Values;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbbSNMPVersion;
     }
 }
 

@@ -31,6 +31,8 @@ namespace SNMP
 
             thread.IsBackground = true;
             thread.Start();
+
+            cbbSNMPVersion.Text = "2";
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
@@ -45,8 +47,12 @@ namespace SNMP
                 SimpleSnmp snmp = null;
 
                 loadSNMPParameters(out snmp);
-
-                SnmpVersion version = SnmpVersion.Ver1;
+                SnmpVersion version = SnmpVersion.Ver2;
+                if (cbbSNMPVersion.SelectedItem.Equals("1"))
+                {
+                    version = SnmpVersion.Ver1;
+                }
+                
                 VbCollection vbList = new VbCollection();
                 vbList.Add(txtOIDValue.Text);
 
