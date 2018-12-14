@@ -46,6 +46,7 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Values = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClearData = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSNMPListValue)).BeginInit();
@@ -63,7 +64,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(690, 147);
+            this.groupBox1.Size = new System.Drawing.Size(749, 147);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông số SNMP";
@@ -124,7 +125,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(690, 65);
+            this.groupBox2.Size = new System.Drawing.Size(749, 65);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SNMP";
@@ -162,9 +163,9 @@
             this.STT,
             this.OID,
             this.Values});
-            this.dgvSNMPListValue.Location = new System.Drawing.Point(12, 271);
+            this.dgvSNMPListValue.Location = new System.Drawing.Point(12, 274);
             this.dgvSNMPListValue.Name = "dgvSNMPListValue";
-            this.dgvSNMPListValue.Size = new System.Drawing.Size(690, 150);
+            this.dgvSNMPListValue.Size = new System.Drawing.Size(749, 191);
             this.dgvSNMPListValue.TabIndex = 2;
             // 
             // cbbSNMPVersion
@@ -215,11 +216,22 @@
             this.Values.Name = "Values";
             this.Values.Width = 500;
             // 
+            // btnClearData
+            // 
+            this.btnClearData.Location = new System.Drawing.Point(12, 245);
+            this.btnClearData.Name = "btnClearData";
+            this.btnClearData.Size = new System.Drawing.Size(63, 23);
+            this.btnClearData.TabIndex = 9;
+            this.btnClearData.Text = "Clear";
+            this.btnClearData.UseVisualStyleBackColor = true;
+            this.btnClearData.Click += new System.EventHandler(this.btnClearData_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 450);
+            this.ClientSize = new System.Drawing.Size(773, 477);
+            this.Controls.Add(this.btnClearData);
             this.Controls.Add(this.dgvSNMPListValue);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -255,6 +267,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn OID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Values;
+        private System.Windows.Forms.Button btnClearData;
     }
 }
 

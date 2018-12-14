@@ -142,5 +142,10 @@ namespace SNMP
         {
             this.miThreadState = 0;
         }
+
+        private void btnClearData_Click(object sender, EventArgs e)
+        {
+            dgvSNMPListValue.Rows.Clear();
+        }
     }
 }
